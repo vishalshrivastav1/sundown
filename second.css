@@ -105,9 +105,10 @@
 }
 
 #page3{
-    height:100%;
+   min-height: 100%;
     width: 100%;
-    background-color: antiquewhite;
+    padding: 4vw 0;
+
 }
 
 
@@ -126,7 +127,45 @@
 #elem{
     height:150px;
     width:100%;
-    background-color: orange;
+    border-bottom: 1px solid #0000005a;
     position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 2vw 0;
+    overflow: hidden;
+}
 
+
+#elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+#elem .overlay{
+    height:100%;
+    width:100%;
+    background-color: orange;
+    position: absolute;
+    left:0;
+    top:-100%;
+    transition: all ease 0.2s;
+}
+
+#elem:hover .overlay{
+    top:0;
+}
+
+
+.fixed-image{
+    height:30vw;
+    width: 23vw;
+    background-color: red;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left:50%;
+    top:25%;
+    display: none;
 }
